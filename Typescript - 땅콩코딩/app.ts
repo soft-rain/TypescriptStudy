@@ -6,8 +6,8 @@ let subject:string = "javascript";
 let courseCompleted:boolean = false;
 
 enum GenderType{
-    Male,
-    Female
+    Male = 'male',
+    Female='female'
 }
 
 //인터페이스
