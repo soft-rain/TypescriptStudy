@@ -13,7 +13,7 @@ var student1 = {
     studentID: 12123123,
     studentName: "janet jackson",
     age: 30,
-    gender: GenderType.Female,
+    gender: 'female',
     subject: "mongo db",
     courseCompleted: true
 };

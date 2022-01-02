@@ -15,7 +15,7 @@ interface Student {
     readonly studentID:number;
     studentName:string;
     age?:number;
-    gender:GenderType;
+    gender:'male' | 'female';
     subject:string;
     courseCompleted:boolean;
     //메소드
@@ -27,7 +27,7 @@ let student1 = {
     studentID:12123123,
     studentName:"janet jackson",
     age:30,
-    gender:GenderType.Female,
+    gender:'female',
     subject:"mongo db",
     courseCompleted:true
 }
