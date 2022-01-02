@@ -1,16 +1,21 @@
 let studentID:number  =12345;
 let studentName:string= "jenny Kim";
 let age:number = 23;
-let gender:string = "female";
+let gender:string = "Female";
 let subject:string = "javascript";
 let courseCompleted:boolean = false;
+
+enum GenderType{
+    Male,
+    Female
+}
 
 //인터페이스
 interface Student { 
     readonly studentID:number;
     studentName:string;
     age?:number;
-    gender:string;
+    gender:GenderType;
     subject:string;
     courseCompleted:boolean;
     //메소드
@@ -22,7 +27,7 @@ let student1 = {
     studentID:12123123,
     studentName:"janet jackson",
     age:30,
-    gender:"female",
+    gender:GenderType.Female,
     subject:"mongo db",
     courseCompleted:true
 }
@@ -32,7 +37,7 @@ function getStudentDetails(studentID:number)
     return {
         studentID:123456,
         studentName:'Mark jacobs',
-        gender:'male',
+        gender:GenderType.Male,
         subject:'Node.js',
         courseCompleted:true
         
