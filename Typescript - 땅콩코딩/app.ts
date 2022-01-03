@@ -1,21 +1,26 @@
 class Employee{
-    fullName:string;
+    private _fullName:string;
     age :number;
     jobTitle:string;
     hourlyRate:number;
     workingHoursPerWeek:number;
 
     constructor(fullName:string, age:number,jobTitle:string, hourlyRate:number, workingHoursPerWeek:number){
-        this.fullName=fullName;
+        this._fullName=fullName;
         this.age=age;
         this.jobTitle=jobTitle;
         this.hourlyRate=hourlyRate;
         this.workingHoursPerWeek=workingHoursPerWeek;
+    }
 
-
+    get fullName(){
+        return this._fullName;
+    }
+    set fullName(value:string){
+        this._fullName = value;
     }
     printEmployeeDetails= ():void=>{
-        console.log(`${this.fullName}의 직업은 ${this.jobTitle}이고 일주일의 수입은 
+        console.log(`${this._fullName}의 직업은 ${this.jobTitle}이고 일주일의 수입은 
         ${this.hourlyRate*this.workingHoursPerWeek}달러이다.`)
     }
 }
