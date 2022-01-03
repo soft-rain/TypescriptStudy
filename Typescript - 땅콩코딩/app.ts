@@ -1,11 +1,6 @@
-type StringOrNum = string | number;
-let itemPrice :  number;
-
-const setItemPrice=(price:StringOrNum):void=>{
-    if (typeof price === 'string'){
-        itemPrice=0;
-    } else{   
-        itemPrice=price;
+function sendGreeting(message = 'Hello', userName = 'there'):void{
+    console.log(`${message}, ${userName}`);
     }
-}
-setItemPrice(50);
+    sendGreeting();
+    sendGreeting('Good morning');
+    sendGreeting('Good afternoon', 'Jenny');
